@@ -22,6 +22,7 @@ public class User  implements UserDetails {
     private int id;
     private String name;
     private String pass;
+    private String address;
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -42,21 +43,21 @@ public class User  implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }
